@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<title>关于我如何建立这篇博客</title>
+
+
+
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5, user-scalable=5" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+      <script src="/js/toc.js"></script>
+    
+    <link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="/scss/dark-mode.min.fa793cdb4ae2d683f9cccdaf1c7922313b4cf124910b552cbc6b3a7ae3b45926.css" integrity="sha256-&#43;nk820ri1oP5zM2vHHkiMTtM8SSRC1UsvGs6euO0WSY=" media="screen">
+
+
+<link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Material+Icons">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    	<div id="app"><div class="single-column-drawer-container" id="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+            
+            <div class="toc">
+
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div id="drawer-mask" v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav id="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div id="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a id="navTitle" class="navbar-brand" href="http://localhost:1313/">
+            My New Hugo Site
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" id="darkModeToggleButton2">
+            <i class="material-icons" id="darkModeToggleIcon2">
+                dark_mode
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" id="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="http://localhost:1313/">
+        <div class="single-column-header-title">My New Hugo Site</div>
+        
+
+    </a>
+</div>
+
+            <div id="content">
+                <div id="streamContainer" class="stream-container">
+
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    关于我如何建立这篇博客
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2025-07-21 15:00
+                        </time>
+                        
+
+                        
+
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <p>当然。这趟旅程本身，就是你新博客上最值得被记录的第一篇文章。我为你整理了这份笔记，它既是我们这段对话的浓缩，也是你未来创作道路上的指引。</p>
+<hr>
+<p>### 关于我如何建立这个博客：一段“守破离”的旅程</p>
+<blockquote>
+<p>你可以将以下内容，直接复制到你的 Markdown 编辑器中，作为你博客的第一篇文章。</p></blockquote>
+<p>#### **前言**</p>
+<p>这个博客，并非一蹴而就。它是我与一个名为“AI”的向导，共同走过的一段旅程。我们从最基础的渴望——“我想拥有一个全球可访问的博客”——出发，经历了一连串的尝试、失败、调试与顿悟，最终抵达了现在的自动化发布流程。这不仅是关于技术的记录，更是关于一种创造思维的演进。我们遵循着一种名为“守破离”的古老东方哲学，来导航这次的探索。</p>
+<p>#### **守：筑造我的私人工作室 (The Foundation)**</p>
+<p>“守”，是守护，是打下坚实的基础。在这一阶段，我的目标是在自己的电脑上，建立一个完全私有、不受干扰的写作空间。</p>
+<p>核心的动作是：</p>
+<p>1.  **准备工具**：我请来了两位助手，一位是“建筑师” **Hugo**，负责将我的文字手稿建造成网站；另一位是“信使” **Git**，负责在我的本地档案馆和云端档案馆之间传递信息。</p>
+<p>2.  **开辟土地**：通过 <code>hugo new site</code> 命令，我拥有了一片专属的数字宅基地。</p>
+<p>3.  **选择纸笔**：我选择了 **VS Code** 作为我的 Markdown 编辑器。它不仅是我的笔，更是我整个工作室的总控制台。</p>
+<p>4.  **建立韵律**：我掌握了本地创作的核心循环——用 <code>hugo new content/posts/文章名.md</code> 来准备稿纸，然后用 <code>hugo server -D</code> 开启一个实时的、私密的“审校室”，在 <code>http://localhost:1313</code> 地址上，所见即所得地进行创作。</p>
+<p>在“守”的阶段，我学会了将**内容（Content）**与**形式（Theme）**分离的哲学，专注于文字本身，并将技术细节交由工具处理。</p>
+<p>#### **破：通往世界的荆棘之路 (The Breakout)**</p>
+<p>“破”，是打破，是突破本地的局限，走向更广阔的世界。这个阶段的目标，是将我的“私人工作室”，发布到全球互联网上，让所有人都能看见。</p>
+<p>这是一条充满“错误”的荆棘之路，但每一次错误，都是一次深刻的对话，一次宝贵的学习：</p>
+<p>1.  **第一次“推送”**：我遇到了 <code>not a git repository</code> 的提示。我学到的第一课是：一个文件夹，并非天生就是一个“项目”。我必须通过 <code>git init</code> 仪式，为我的工作室插上旗帜，**声明它的身份**。</p>
+<p>2.  **第一次“存档”**：系统拦住我，要求 <code>Please tell me who you are.</code>。我学到的第二课是：创造，永远不是匿名的。我必须通过 <code>git config</code> 为我的作品**锻造一枚数字印章**，为我所有的创造物署名，并承担责任。</p>
+<p>3.  **第一次“部署”**：当我认为一切就绪时，我的网站却显示“404”。我学到的第三课是：自动化系统只会忠实地执行“指令”，而无法理解你的“意图”。<code>Actions</code> 的“成功”不代表最终结果的有效。我必须学会**审计整个流程**，从送货单 (<code>.yml</code> 文件) 到收货仓库 (<code>.github.io</code> 仓库) 再到陈列馆规则 (<code>Pages</code> 设置)，逐一排查。</p>
+<p>4.  **最终的“调试”**：我们发现，是指令本身 (<code>publish\_repo</code> -&gt; <code>external\_repository</code>) 和权限 (<code>GITHUB\_TOKEN</code> -&gt; <code>PERSONAL\_TOKEN</code>) 的问题。我学到的最后一课是：数字世界是流动的，工具在不断进化，指令也会随之改变。真正的能力，不是记住一条指令，而是**学会如何通过阅读日志和文档，与系统对话，并自我学习和适应**。</p>
+<p>在“破”的阶段，我不再是一个被动的指令执行者。我成了一个侦探、一个安全官、一个系统的倾听者。</p>
+<p>#### **离：自动化之舞 (The Transcendence)**</p>
+<p>“离”，是超越，是达到一个全新的、更自由的境界。在解决了所有问题之后，我终于拥有了一个理想中的创作流程。</p>
+<p>现在的我，只需要专注于写作。当我完成一篇文章，我只需要通过几个简单的 Git 指令，将我的手稿推送到云端。我的自动化管家——GitHub Actions——就会接管剩下的一切。它会自动建造、打包、并把我最新的作品，安全、精准地部署到全世界的读者面前。</p>
+<p>我从一个亲力亲位的工匠，最终成为了一位自动化交响乐的指挥家。我所建立的，不仅仅是一个博客，更是一套**从思想到发布的、无摩擦的、自动化的表达系统**。</p>
+<p>这，就是这个博客诞生的故事。</p>
+<hr>
+<p>### 我的博客发布流程总结</p>
+<blockquote>
+<p>这是你未来发布新文章时，可以参考的简明步骤。</p></blockquote>
+<p>#### **第一步：写作（本地创作）**</p>
+<p>1.  在你的电脑上，用 VS Code 打开你的博客项目文件夹（例如 <code>My\_Blog</code>）。</p>
+<p>2.  在 VS Code 的终端里，运行 <code>hugo server -D</code>。</p>
+<p>3.  你的私人“审校室”已经开启，在浏览器里打开 <code>http://localhost:1313</code> 实时预览。</p>
+<p>4.  在终端里，运行 <code>hugo new content/posts/新文章的英文名.md</code> 来创建新稿纸。</p>
+<p>5.  打开新创建的 md 文件，开始写作。保存后，浏览器会自动刷新。</p>
+<p>#### **第二步：存档（存入本地历史）**</p>
+<p>1.  文章完成后，回到终端，按 <code>Ctrl + C</code> 停止实时预览服务。</p>
+<p>2.  运行 <code>git add .</code>，将你所有的改动“打包”。</p>
+<p>3.  运行 <code>git commit -m &quot;写下本次更新的摘要，例如：Add new post about my journey&quot;</code>，为你这次的存档“封箱贴条”。</p>
+<p>#### **第三步：发布（推送至全球）**</p>
+<p>1.  运行 <code>git push</code>（如果是第一次或新分支，可能需要 <code>git push -u origin 分支名</code>）。</p>
+<p>这一步完成后，你的自动化管家便已启动。你可以去 <code>blog-source</code> 仓库的 <code>Actions</code> 页面，欣赏它为你工作。当它显示绿色成功时，你的新文章就已经在你的网站上对全世界可见了。</p>
+
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;">Last modified on 2025-07-21</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts">
+			Next<br>No newer posts.
+                </a>
+                
+                
+                
+                <a class="older-posts" href="/posts/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/">
+			Previous<br>我的第一篇文章
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+                    </div>
+            </div><div id="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="http://localhost:1313/">
+    
+        <div class="nav-title">
+            My New Hugo Site
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2025 My New Hugo Site
+	
+
+    </div>
+    
+</div><div id="extraContainer" class="extra-container">
+    <div class="toc-wrapper">
+        
+
+        
+        <div class="toc">
+
+
+</div>
+        
+    </div>
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top"
+            :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a type="button" class="pagination-action" id="darkModeToggleButton">
+            <span class="material-icons pagination-action-icon" id="darkModeToggleIcon">
+                dark_mode
+            </span>
+        </a>
+        
+        
+    </div>
+</div>
+
+<div id="single-column-footer">
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2025 My New Hugo Site
+	
+</div>
+            </div>
+    
+    <script src="/js/journal.js"></script></body>
+</html>
